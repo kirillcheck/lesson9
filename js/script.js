@@ -110,11 +110,18 @@ window.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     });
 
-    let descriptionBtn = document.getElementsByClassName('description-btn')[0];
 
-    descriptionBtn.addEventListener('click', function () {
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+
+
+    let Info = document.querySelector('.info');
+
+    Info.addEventListener('click', function (event) {
+        let target = event.target;
+        if ( target.classList.contains('description-btn')) { 
+            // если цель по которой мы кликнули содержит класс description-btn 
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
     });
 
 
